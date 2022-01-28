@@ -1,0 +1,38 @@
+# THIS FILE WAS GENERATED USING github.com/jackyzha0/hugo-obsidian
+# DO NOT EDIT
+index:
+    links:
+        content/:
+            - source: content/
+              target: /notes/surf/
+              text: 冲浪技巧
+            - source: content/
+              target: /notes
+              text: 所有页面
+        content/notes/surf:
+            - source: content/notes/surf
+              target: /notes/surf/search
+              text: 搜索技巧
+    backlinks:
+        /notes:
+            - source: content/
+              target: /notes
+              text: 所有页面
+        /notes/surf/:
+            - source: content/
+              target: /notes/surf/
+              text: 冲浪技巧
+        /notes/surf/search:
+            - source: content/notes/surf
+              target: /notes/surf/search
+              text: 搜索技巧
+links:
+    - source: content/
+      target: /notes/surf/
+      text: 冲浪技巧
+    - source: content/
+      target: /notes
+      text: 所有页面
+    - source: content/notes/surf
+      target: /notes/surf/search
+      text: 搜索技巧

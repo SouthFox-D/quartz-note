@@ -1,4 +1,4 @@
-<h3>Backlinks</h3>
+<h3>反向连接</h3>
 <ul class="backlinks">
     {{$url := urls.Parse .Site.BaseURL }}
     {{$host := strings.TrimRight "/" $url.Path }}
@@ -14,7 +14,7 @@
     {{- end -}}
     {{else}}
     <li>
-        No backlinks found
+        没有找到反向连接
     </li>
     {{end}}
 </ul>

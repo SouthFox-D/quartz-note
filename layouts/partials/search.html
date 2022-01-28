@@ -1,6 +1,6 @@
 <div id="search-container">
     <div id="search-space">
-        <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search" placeholder="Search for something...">
+        <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search" placeholder="搜点什么吧……">
         <div id="results-container">
         </div>
     </div>
@@ -69,13 +69,13 @@
 <script>
     const contentIndex = new FlexSearch.Document({
         cache: true,
-        charset: "latin:extra",
+        charset: "utf-8:extra",
         optimize: true,
         worker: true,
         document: {
             index: [{
                 field: "content",
-                tokenize: "strict",
+                tokenize: "full",
                 context: {
                     resolution: 5,
                     depth: 3,
@@ -84,7 +84,7 @@
                 suggest: true,
             }, {
                 field: "title",
-                tokenize: "forward",
+                tokenize: "full",
             }]
         }
     })
@@ -94,6 +94,7 @@
             id: key,
             title: value.title,
             content: removeMarkdown(value.content),
+            encode: str => str.replace(/[\x00-\x7F]/g, "").split(""),
         })
     }
 
@@ -190,8 +191,8 @@
             // display
             if (finalResults.length === 0) {
                 results.innerHTML = `<button class="result-card">
-                    <h3>No results.</h3>
-                    <p>Try another search term?</p>
+                    <h3>无结果</h3>
+                    <p>尝试换个关键词？</p>
                 </button>`
             } else {
                 results.innerHTML = finalResults

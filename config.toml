@@ -1,8 +1,7 @@
-baseURL = "https://quartz.jzhao.xyz/"
-languageCode = "en-us"
-googleAnalytics = "G-XYFD95KB4J"
+baseURL = "https://note.southfox.me/"
+languageCode = "zh"
 pygmentsUseClasses = true
-relativeURLs = true
+relativeURLs = false
 disablePathToLower = true
 ignoreFiles = [
     "/content/templates/*",
@@ -14,7 +13,7 @@ enableGitInfo = true
 
 [markup]
     [markup.tableOfContents]
-        endLevel = 3
+        endLevel = 4
         ordered = true
         startLevel = 2
     [markup.highlight]

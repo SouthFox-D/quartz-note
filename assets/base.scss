@@ -7,7 +7,7 @@
 }
 
 h1, h2, h3, h4, ol, ul, thead {
-  font-family: Inter;
+  // font-family: Inter;
   color: var(--dark);
   font-weight: revert;
   margin: revert;
@@ -15,7 +15,7 @@ h1, h2, h3, h4, ol, ul, thead {
 }
 
 p, ul, text {
-  font-family: 'Source Sans Pro', sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
   color: var(--gray);
   fill: var(--gray);
   font-weight: revert;
@@ -45,7 +45,7 @@ p, ul, text {
   }
 
   & > li::marker, & > li > ol > li::marker {
-    font-family: Source Sans Pro;
+    // font-family: Source Sans Pro;
     font-weight: 700;
   }
 }
@@ -76,7 +76,7 @@ sup {
 }
 
 p, tbody, li {
-  font-family: Source Sans Pro;
+  // font-family: Source Sans Pro;
   color: var(--gray);
   line-height: 1.5em;
 }
@@ -133,7 +133,7 @@ td, th {
 .section {
   & h3 > a {
     font-weight: 700;
-    font-family: Inter;
+    // font-family: Inter;
     margin: 0;
   }
   & p {
@@ -176,11 +176,12 @@ article {
   }
 
   & a {
-    font-family: Source Sans Pro;
+    text-decoration: underline;
+    // font-family: Source Sans Pro;
     font-weight: 600;
 
     &.internal-link {
-      text-decoration: none;
+      text-decoration: underline;
       background-color: transparentize(#8f9fa9, 0.85);
       padding: 0 0.1em;
       margin: auto -0.1em;
@@ -194,13 +195,17 @@ article {
   font-size: 0.9rem;
 }
 
+.footnote-backref {
+  text-decoration: none;
+}
+
 sup > a {
   text-decoration: none;
   padding: 0 0.1em 0 0.2em;
 }
 
 a {
-  font-family: Inter, sans-serif;
+  // font-family: Inter, sans-serif;
   font-size: 1em;
   font-weight: 700;
   text-decoration: none;
@@ -213,14 +218,14 @@ a {
 }
 
 pre {
-  font-family: 'Fira Code';
+  // font-family: 'Fira Code';
   padding: 0.75em;
   border-radius: 3px;
   overflow-x: scroll;
 }
 
 code {
-  font-family: 'Fira Code';
+  // font-family: 'Fira Code';
   font-size: 0.85em;
   padding: 0.15em 0.3em;
   border-radius: 5px;
@@ -256,7 +261,7 @@ footer {
 
 hr {
   width: 25%;
-  margin: 4em auto;
+  margin: 3em auto;
   height: 2px;
   border-radius: 1px;
   border-width: 0;
@@ -383,7 +388,7 @@ header {
     & > input {
       box-sizing: border-box;
       padding: 0.5em 1em;
-      font-family: Inter, sans-serif;
+      // font-family: Inter, sans-serif;
       color: var(--dark);
       font-size: 1.1em;
       border: 1px solid var(--outlinegray);
@@ -403,7 +408,7 @@ header {
         width: 100%;
 
         // normalize button props
-        font-family: inherit;
+        // font-family: inherit;
         font-size: 100%;
         line-height: 1.15;
         margin: 0;
