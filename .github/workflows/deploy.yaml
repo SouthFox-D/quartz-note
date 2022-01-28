@@ -27,10 +27,14 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: master  # deploying branch
-          cname: quartz.jzhao.xyz
+    - name: Deploy
+      env:
+        DEPLOY_KEY: ${{ secrets.NOTE_DEPLOY }}
+      run: |
+        git config --global user.name "SouthFox-D"
+        git config --global user.email "southfoxdreamer@gmail.com"
+        cd ./public
+        git init
+        git add --all .
+        git commit -m "GitHub action Auto Builder"
+        git push --quiet --force https://$DEPLOY_KEY@github.com/SouthFox-D/note master
