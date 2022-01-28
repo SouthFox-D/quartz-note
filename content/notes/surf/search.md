@@ -101,7 +101,7 @@ searx 是一款聚合搜索引擎，本身不抓取页面，抓取的是其他�
 
 让搜索结果仅从特定网站或域名中搜取,例如 `python 加载压缩文件 site:github.io`，就是只抓取 `Github Page`里的结果。此语法配合[互联网活菩萨](notes/surf/互联网活菩萨.md)或优质网站更能发挥效用。
 
-**注意：** 百度承接上意，降低了`未备案`网站的圈中（甚至不抓取），所以`site:github.io`搜索出来的结果停留在了一七一八年左右。在百度搜索`python 加载压缩`时，基本出来的都是 CSDN 的结果，还都是抄《Python Cookbook》这本书上的，也不给出真正的来源，使用其他搜索引擎搜索`python 加载压缩文件 site:github.io`，就挺容易找到真正的来源……
+**注意：** 百度承接上意，降低了`未备案`网站的权重（甚至不抓取），所以`site:github.io`搜索出来的结果停留在了一七一八年左右。在百度搜索`python 加载压缩`时，基本出来的都是 CSDN 的结果，还都是抄《Python Cookbook》这本书上的，也不给出真正的来源，使用其他搜索引擎搜索`python 加载压缩文件 site:github.io`，就挺容易找到真正的来源……
 
 [^1]: [Github - searx](https://github.com/searx/searx)
 [^2]:[新兴搜索引擎 You.com 获 2000 万美元融资，高度自定义](https://www.chongbuluo.com/thread-11208-1-1.html)

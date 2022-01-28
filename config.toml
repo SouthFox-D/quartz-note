@@ -1,7 +1,7 @@
 baseURL = "https://note.southfox.me/"
 languageCode = "zh"
 pygmentsUseClasses = true
-relativeURLs = false
+relativeURLs = true
 disablePathToLower = true
 ignoreFiles = [
     "/content/templates/*",
