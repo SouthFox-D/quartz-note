@@ -1,40 +1,40 @@
-name: Deploy to GitHub Pages
+#name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - hugo
+#on:
+  #push:
+    #branches:
+      #- hugo
 
-jobs:
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
+#jobs:
+  #deploy:
+    #runs-on: ubuntu-18.04
+    #steps:
+      #- uses: actions/checkout@v2
 
-      - name: Build Link Index
-        uses: jackyzha0/hugo-obsidian@v2.7
-        with:
-          index: true
-          input: content
-          output: data
+      #- name: Build Link Index
+        #uses: jackyzha0/hugo-obsidian@v2.7
+        #with:
+          #index: true
+          #input: content
+          #output: data
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.82.0'
-          extended: true
+      #- name: Setup Hugo
+        #uses: peaceiris/actions-hugo@v2
+        #with:
+          #hugo-version: '0.82.0'
+          #extended: true
 
-      - name: Build
-        run: hugo --minify
+      #- name: Build
+        #run: hugo --minify
 
-      - name: Deploy
-        env:
-          DEPLOY_KEY: ${{ secrets.NOTE_DEPLOY }}
-        run: |
-          git config --global user.name "SouthFox-D"
-          git config --global user.email "southfoxdreamer@gmail.com"
-          cd ./public
-          git init
-          git add --all .
-          git commit -m "GitHub action Auto Builder"
-          git push --quiet --force https://$DEPLOY_KEY@github.com/SouthFox-D/note master
+      #- name: Deploy
+        #env:
+          #DEPLOY_KEY: ${{ secrets.NOTE_DEPLOY }}
+        #run: |
+          #git config --global user.name "SouthFox-D"
+          #git config --global user.email "southfoxdreamer@gmail.com"
+          #cd ./public
+          #git init
+          #git add --all .
+          #git commit -m "GitHub action Auto Builder"
+          #git push --quiet --force https://$DEPLOY_KEY@github.com/SouthFox-D/note master
